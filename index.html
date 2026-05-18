@@ -1231,10 +1231,11 @@
             position: relative;
             border-radius: var(--radius-lg);
             overflow: hidden;
-            aspect-ratio: 4/3;
+            aspect-ratio: 1/1;
             cursor: pointer;
             border: 1px solid var(--border-primary);
             transition: all var(--transition-medium);
+            object-fit: cover;
         }
 
         .project-card:hover {
@@ -1902,6 +1903,54 @@
         .back-to-top:hover svg {
             fill: var(--text-primary);
         }
+
+
+        /* Image Ratio Fixes - only for images */
+        .hero-image {
+            padding: 0;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hero-image-placeholder img,
+        .hero-image > img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            object-fit: cover !important;
+            object-position: center center;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .about-image-main img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            object-fit: cover !important;
+            object-position: center center;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-image {
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            object-fit: cover !important;
+            object-position: center center;
+            display: block;
+        }
+
     </style>
 
 
@@ -2025,7 +2074,7 @@
                     <div class="about-image-line"></div>
                     <div class="about-image-main">
                         <!-- PLACEHOLDER: Add about image here -->
-                        <span style="color: var(--text-muted);">About Image Placeholder</span>
+                        <img src="me.png" alt="" >
                     </div>
                     <div class="about-image-accent"></div>
                     <div class="about-stats">
@@ -2166,13 +2215,12 @@
             <div class="projects-grid">
                 <div class="project-card reveal" style="transition-delay: 0s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 1
+                      <img src="roco.png" alt="">
                     </div>
                     <div class="project-overlay">
                         <span class="project-category">E-Commerce</span>
-                        <h3 class="project-title">Luxury Fashion Store</h3>
-                        <a href="#" class="project-link">
+                        <h3 class="project-title">ROCO Furniture Store</h3>
+                        <a href="https://roco.pk/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
@@ -2181,13 +2229,12 @@
 
                 <div class="project-card reveal" style="transition-delay: 0.1s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 2
+                       <img src="digi.png" alt="">
                     </div>
                     <div class="project-overlay">
                         <span class="project-category">Corporate</span>
-                        <h3 class="project-title">Tech Startup Website</h3>
-                        <a href="#" class="project-link">
+                        <h3 class="project-title">DIGIDREAM Website</h3>
+                        <a href="https://digidream.net/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
@@ -2196,13 +2243,12 @@
 
                 <div class="project-card reveal" style="transition-delay: 0.2s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 3
+                       <img src="cylvr.png" alt="">
                     </div>
                     <div class="project-overlay">
-                        <span class="project-category">Blog</span>
-                        <h3 class="project-title">Lifestyle Magazine</h3>
-                        <a href="#" class="project-link">
+                        <span class="project-category">AI</span>
+                        <h3 class="project-title">Cylvr Website</h3>
+                        <a href="https://cylvr.com/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
@@ -2211,13 +2257,12 @@
 
                 <div class="project-card reveal" style="transition-delay: 0.3s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 4
+                       <img src="emi.png" alt="">
                     </div>
                     <div class="project-overlay">
-                        <span class="project-category">Restaurant</span>
-                        <h3 class="project-title">Fine Dining Platform</h3>
-                        <a href="#" class="project-link">
+                        <span class="project-category">Tools</span>
+                        <h3 class="project-title">EMI Loan Calculators</h3>
+                        <a href="https://emicalculator.ai/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
@@ -2226,13 +2271,12 @@
 
                 <div class="project-card reveal" style="transition-delay: 0.4s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 5
+                      <img src="plan.png" alt="">
                     </div>
                     <div class="project-overlay">
-                        <span class="project-category">Portfolio</span>
-                        <h3 class="project-title">Creative Agency</h3>
-                        <a href="#" class="project-link">
+                        <span class="project-category">Planning Tools</span>
+                        <h3 class="project-title">ROCO </h3>
+                        <a href="https://planningtool.roco.pk/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
@@ -2241,13 +2285,12 @@
 
                 <div class="project-card reveal" style="transition-delay: 0.5s;">
                     <div class="project-image">
-                        <!-- PLACEHOLDER: Add project image -->
-                        Project Image 6
+                       <img src="bac.png" alt="">
                     </div>
                     <div class="project-overlay">
-                        <span class="project-category">Health</span>
-                        <h3 class="project-title">Wellness Clinic</h3>
-                        <a href="#" class="project-link">
+                        <span class="project-category">E-commerce</span>
+                        <h3 class="project-title">B.A.C Electronic</h3>
+                        <a href="https://bacelectronic.com/" class="project-link">
                             View Project
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                         </a>
